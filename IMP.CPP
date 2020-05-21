@@ -1,10 +1,10 @@
 #include "LOG.CPP"
-void welcome()
+void welcome() // Welcome Page
 {
      clrscr();
      randomize();
      int gd=DETECT,gm;
-     initgraph(&gd,&gm,"C:\\TC\\BGI");
+     initgraph(&gd,&gm,""); // Type your BGI directory inside the quotes
      settextstyle(3,HORIZ_DIR,4);
      int x;
      setcolor(BLUE);
@@ -37,7 +37,7 @@ void welcome()
      cleardevice();
      closegraph();
 }
-void main()
+void main() //Home page
 {
      clrscr();
      int y;
