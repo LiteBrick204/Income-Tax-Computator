@@ -5,6 +5,11 @@
 #include<string.h>
 #include<stdlib.h>
 #include<graphics.h>
+//This file contains the internal working of FORM.CPP
+//This code computes how much you need to pay as IT Returns
+//It's very long!
+//Handle With Care!!
+
 struct D13
 {
    long PP,LIP,PPF,NSC,ULIP,ELSS,TF,PAHL,FD_5Y,SSS,NPS;
@@ -15,7 +20,7 @@ struct D15A
   int MPP_S,MPP_P,PHC;
   char ch;
 };
-class salary
+class salary //class which stores user's salary info to compute IT returns
 {
    public:
    long Basic,HRA,LTA,TA,OA,GS,PF_DEDUCT,PT;
@@ -38,6 +43,8 @@ void salary::getsall()
        GS=Basic+HRA+LTA+TA;
        cout<<"\nGross Salary = Rs."<<GS;
    }
+//Now the declarations part
+
 class declar:public salary{
 public:
 char D1[50],D2[250],D3[10],D5[150],MOT[3];
@@ -49,7 +56,7 @@ D15A B;
 void getdeclar();
 void dispdeclar();
 };
-void declar::getdeclar()
+void declar::getdeclar() // fn which gets your declarations
 {
      cout<<"\n\t\t\t DECLARATIONS TO BE OBTAINED";
      cout<<"\nEnter Your Name:"; gets(D1);
@@ -174,7 +181,7 @@ void declar::getdeclar()
      cout<<"\nEnter Investment made under notified equity savings scheme under section 80CCG(upto Rs.50,000):";
      cin>>D15F;
 }
-void declar::dispdeclar()
+void declar::dispdeclar() //fn to display your declarations
 {
      cout<<"\nName:"<<D1;    delay(300);
      cout<<"\nResidential Address:"<<D2; delay(300);
