@@ -27,7 +27,7 @@ void box(int left, int top, int right, int bottom) // Function to draw outler bo
     { cout<<b; }
     cout<<f;
 }
-void login()
+void login() //fn which handles login process
 {
     int i;
     char t;
@@ -81,7 +81,7 @@ void login()
       loginmenu();
     }while(t=='y' || t=='Y');
     }
-void loginmenu()
+void loginmenu() //fn which displays login menu
 {
        clrscr();
        int y;
