@@ -3,20 +3,24 @@
 #include<stdio.h>
 #include<dos.h>
 #include<string.h>
+//The code for IT filling form
+//It's a lot of content!!
+//#HYPE!
+
 class form{
 char name[30],dob[12],email[50],add[100],user[30],pass[10],PAN[10],phno[10];
 public:
 void get();
 void put();
 void modify();
-int checkuser(char ss[30])
+int checkuser(char ss[30]) //Function to verify user; Accessor fn
 {
    return strcmp(user,ss);
 }
 int givepan(char pan[10]){ return strcmp(PAN,pan); }
 int checkkey(char k[10]){ return strcmp(pass,k); }
 }k;
-void form::get()
+void form::get() //Fn which gets IT Form info
 {
     int i; char a;
     cout<<"\nEnter Your Name:"; gets(name);
@@ -45,7 +49,7 @@ void form::get()
     }
     pass[i]='\0';
 }
-void form::put()
+void form::put() //fn which prints user info
 {
    cout<<"\nName:"<<name;
    cout<<"\nDOB:"<<dob;
@@ -56,7 +60,7 @@ void form::put()
    cout<<"\nUserName:"<<user;
    cout<<"\nPassword:"<<pass;
 }
-void form::modify()
+void form::modify() // fn which is used to modify user content
 {
    put();
    char Name[30],DOB[12],Email[50],adD[100],Pass[10],Phno[10];
@@ -80,14 +84,14 @@ void form::modify()
    strcpy(pass,Pass);
    cout<<"\nYour Account Info has been modified!!";
 }
-void getinfo()
+void getinfo() // Fn which gives info the login file
 {
     fstream file("LOGIN.DAT",ios::app|ios::in|ios::binary);
     k.get();
     file.write((char *)&k,sizeof(k));
     file.close();
 }
-void changeinfo()
+void changeinfo()  // fn which updates modified info to login file
 {
   fstream file("LOGIN.DAT",ios::app|ios::in|ios::binary);
   char s[10]; char u[30],ch='f';
@@ -112,7 +116,7 @@ void changeinfo()
   file.seekg(0);
   file.close();
 }
-void putinfo()
+void putinfo() //fn which gets user info from login file
 {
   char us[30],ps[10];
   fstream file("LOGIN.DAT",ios::app|ios::in|ios::binary);
@@ -129,7 +133,7 @@ void putinfo()
   }
   file.close();
 }
-void delacc()
+void delacc() //fn which removes user account from system
 {
   char us[30],ps[10];
   char c='n',found='n';
@@ -160,7 +164,7 @@ void delacc()
   remove("LOGIN.DAT");
   rename("TEMP.DAT","LOGIN.DAT");
 }
-void viewinfo()
+void viewinfo() //fn which contains "About Project" tab
 {
    clrscr();
    cout<<"\n\t\t\t  About the Software\n";
@@ -227,7 +231,7 @@ void viewinfo()
    cout<<"\n\t- New Account Terminator to permanently delete your account!!";
    delay(300);
 }
-void account()
+void account() //Account settings fn
 {
    int x;  char g;
    clrscr();
