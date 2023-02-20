@@ -187,7 +187,7 @@ void viewinfo() //fn which contains "About Project" tab
    delay(402);
    cout<<"\n Version:4.0.10135\n";
    delay(402);
-   cout<<"\n Developed by: G SHALOM SHREYAN.\n";
+   cout<<"\n Developed by: X.\n";
    delay(402);
    cout<<"Patch Notes:";
    delay(300);
@@ -208,7 +208,7 @@ void viewinfo() //fn which contains "About Project" tab
    delay(402);
    cout<<"Version:5.2.10444\n";
    delay(402);
-   cout<<"Developed by: A BADRI KRISHNAN.\n";
+   cout<<"Developed by: X.\n";
    delay(402);
    cout<<"Patch Notes:\n";
    delay(402);
