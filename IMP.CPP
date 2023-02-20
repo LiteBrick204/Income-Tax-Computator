@@ -20,14 +20,14 @@ void welcome() // Welcome Page
      delay(500);
      setcolor(random(6)+3);
      settextstyle(4,HORIZ_DIR,4);
-     outtextxy(144,225,"G SHALOM SHREYAN");
+     outtextxy(144,225,"X");
      delay(500);
      setcolor(random(13)+2);
-     outtextxy(149,254,"A BADRI KRISHNAN");
+     outtextxy(149,254,"X");
      delay(500);
      setcolor(random(6)+1);
      settextstyle(1,HORIZ_DIR,4);
-     outtextxy(1,284,"CLASS:XII-A KENDRIYA VIDYALAYA CLRI");
+     outtextxy(1,284,"XX);
      delay(500);
      setcolor(random(5)+2);
      outtextxy(10,314,"2018-19 COMPUTER SCIENCE PROJECT");
